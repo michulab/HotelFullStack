@@ -2,29 +2,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header{
-    background-image: url(img/header1.png);
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(img/header.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     height: 80vh;
 }
 
 .logo{
     width: 200px;
     height: 100px;
-    margin: 40px;
+    margin-top: 40px;
 }
 
 
 .lista{
     list-style: none;
     display: flex;
-    border-bottom: 1px solid white;
+    border-bottom: 0.5px solid white;
 }
 
 .li{
@@ -42,7 +43,14 @@ header{
     text-decoration: none;
 }
 
-.h1{
+.main{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.h1-main{
     position: relative;
     top: -400px;
     display: flex;
@@ -53,7 +61,97 @@ header{
     width: 75vw;
 }
 
-.main{
-    display: flex;
-    justify-content: center;
+.formulario{
+    background: #212121;
+    color: white;
+    position: relative;
+    top: -250px;
+    width: 70vw;
+    padding: 60px 40px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 'titulo titulo check-in-label . check-out-label'
+                        'titulo titulo check-in-input . check-out-input'
+                        '. . adultos-label menores-label habitaciones-label'
+                        '. . adultos-input menores-input habitaciones-input'
+                        'boton-form boton-form cotizar cotizar cotizar';
+}
+
+
+.h1-form{
+    grid-area: titulo;
+    text-align: center;
+}
+
+.boton-form{
+    grid-area: boton-form;
+    padding: 20px;
+    background: #212121;
+    color: white;
+    border: 1px solid rgb(129, 129, 129);
+}
+
+.boton-form:hover{
+    border: 1px solid white;
+    cursor: pointer;
+    scale: 1.05;
+}
+
+.check-in{
+    grid-area: check-in-label;
+}
+#check-in{
+    grid-area: check-in-input;
+}
+
+.check-out{
+    grid-area: check-out-label;
+    
+}
+
+#check-out{
+    grid-area: check-out-input;
+    
+}
+
+.adultos{
+    grid-area: adultos-label;
+    
+}
+
+#adultos{
+    grid-area: adultos-input;
+    
+}
+
+.menores{
+    grid-area: menores-label;
+    
+}
+
+#menores{
+    grid-area: menores-input;
+    
+}
+
+.habitaciones{
+    grid-area: habitaciones-label;
+    
+}
+
+#habitaciones{
+    grid-area: habitaciones-input;
+    
+}
+
+.cotizar{
+    grid-area: cotizar;
+    background: rgb(121, 1, 1);
+    color: white;
+    border: 1px solid rgb(129, 129, 129);
+}
+
+.cotizar:hover{
+    border: 1px solid white;
+    scale: 1.05;
 }
