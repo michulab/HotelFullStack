@@ -75,7 +75,7 @@ header{
     color: white;
     width: 75%;
     max-width: 1300px;
-    padding: 100px;
+    padding: 80px;
 }
 
 .formulario{
@@ -165,7 +165,7 @@ header{
 
 .cotizar{
     grid-area: cotizar;
-    background: rgb(121, 1, 1);
+    background: rgb(54, 117, 219);
     color: white;
     border: 1px solid rgb(129, 129, 129);
 }
@@ -175,7 +175,37 @@ header{
     scale: 1.05;
 }
 
+.contenido{
+    display: flex;
+    flex-direction: column;
+    padding: 250px;
+}
 
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    height: 450px;
+}
+
+.footer-bg{
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+    max-width: 1900px;
+}
+
+.logo-footer{
+    width: 300px;
+    height: auto;
+}
+
+.social *{
+    width: 50px;
+    margin: 20px;
+}
 
 
 @media (max-width: 1400px) {
