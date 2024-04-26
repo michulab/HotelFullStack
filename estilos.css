@@ -39,7 +39,6 @@ header{
 }
 
 .li{
-    color: white;
     font-size: 1.3rem;
     padding: 10px 30px 0 0 ;
     margin: 80px 0 0 20px ;
@@ -51,6 +50,7 @@ header{
 
 .item{
     text-decoration: none;
+    color: white;
 }
 
 
