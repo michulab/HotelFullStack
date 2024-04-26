@@ -5,14 +5,24 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 header{
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(img/header.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     display: flex;
     justify-content: space-evenly;
-    height: 80vh;
+    height: 250px;
+}
+
+
+.header-bg{
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+    max-width: 1900px;
 }
 
 .logo{
@@ -43,30 +53,39 @@ header{
     text-decoration: none;
 }
 
+
+
+
+
+
+
 .main{
     display: flex;
     justify-content: center;
-    width: 100%;
     flex-wrap: wrap;
 }
 
 .h1-main{
     position: relative;
-    top: -400px;
+    /* top: -400px; */
     display: flex;
     justify-content: center;
     text-align: center;
     font-size: 2rem;
     color: white;
-    width: 75vw;
+    width: 75%;
+    max-width: 1300px;
+    padding: 100px;
 }
 
 .formulario{
     background: #212121;
     color: white;
     position: relative;
-    top: -250px;
+    /* top: -250px; */
     width: 70vw;
+    max-width: 1300px;
+    margin-top: 50px;
     padding: 60px 40px;
     display: grid;
     grid-gap: 20px;
@@ -154,4 +173,22 @@ header{
 .cotizar:hover{
     border: 1px solid white;
     scale: 1.05;
+}
+
+
+
+
+@media (max-width: 1400px) {
+    header{
+        height: auto;
+    }
+    .h1-main{
+        margin-top: 60px;
+        font-size: 1.5rem;
+        width: 90%;
+    }
+
+    .formulario{
+        margin-top: 0;
+    }
 }
