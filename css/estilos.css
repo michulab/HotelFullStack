@@ -93,7 +93,8 @@ header{
                         'titulo titulo check-in-input . check-out-input'
                         '. . adultos-label menores-label habitaciones-label'
                         '. . adultos-input menores-input habitaciones-input'
-                        'boton-form boton-form cotizar cotizar cotizar';
+                        'boton-form boton-form cotizar cotizar cotizar'
+                        '. . solicitud solicitud solicitud';
 }
 
 
@@ -174,6 +175,14 @@ header{
     border: 1px solid white;
     scale: 1.05;
 }
+
+.solicitud{
+    grid-area: solicitud;
+    display: flex;
+    color: greenyellow;
+}
+
+
 
 .contenido{
     display: flex;
