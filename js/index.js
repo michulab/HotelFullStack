@@ -42,7 +42,12 @@ function enviarFormulario() {
     let reporte = document.getElementById("solicitud")
     console.log(reporte)
 
-    if ( checkin <= fechaActual || checkout <=checkin || cantidadAdultos === "" || cantidadMenores === "" || cantidadHabitaciones === "" || email === "" ) {
+    function validarmail(email) {
+        const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
+        return regex.test(email)
+    }
+
+    if ( checkin <= fechaActual || checkout <=checkin || cantidadAdultos === "" || cantidadMenores === "" || cantidadHabitaciones === "" || validarmail(email) === false ) {
     document.getElementById("solicitud").textContent = 
     `Verifique los datos ingresados`
 } else {
