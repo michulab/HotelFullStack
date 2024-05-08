@@ -21,10 +21,10 @@
                 <button class="boton-form">CARACTERISTICAS</button>
                 
                 <label for="check-in" class="check-in">Check-in</label>
-                <input type="date" name="check-in" id="check-in">
+                <input type="date" name="check-in" id="check-in" value="2024-01-01">
                 
                 <label for="check-out" class="check-out">Check-out</label>
-                <input type="date" name="check-out" id="check-out">
+                <input type="date" name="check-out" id="check-out" value="2024-01-01">
                 
                 <label for="adultos" class="adultos">Adultos</label>
                 <input type="number" name="adultos" id="adultos">
@@ -35,9 +35,12 @@
                 <label for="habitaciones" class="habitaciones">Habitaciones</label>
                 <input type="number" name="habitaciones" id="habitaciones">
                 
-                <button class="cotizar" onclick="enviar()">COTIZAR</button>
+                <label for="email" class="email">Ingrese su e-mail:</label>
+                <input type="email" id="email" name="email">
 
-                <p class="solicitud"></p>
+                <button class="cotizar" onclick="enviarFormulario()">COTIZAR</button>
+
+                <p id="solicitud" class="solicitud"></p>
                 
             </section>
 

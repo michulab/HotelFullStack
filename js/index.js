@@ -26,13 +26,24 @@ let footer =`
 `;
 document.getElementById("footer").innerHTML = footer
 
-let adultos = document.getElementById("adultos").value
-let reporte = document.getElementByC("solicitud")
 
-function enviar() {
-    if (adultos !== "") {
-        solicitud.textContent = `La solicitud ha sido enviada con éxito.`;
+function enviarFormulario() {
+    let checkin = document.getElementById("check-in").value
+    let checkout = document.getElementById("check-out").value
+    let cantidadAdultos = document.getElementById("adultos").value
+    console.log(cantidadAdultos)
+    let cantidadMenores = document.getElementById("menores").value
+    let cantidadHabitaciones = document.getElementById("habitaciones").value
+    let email = document.getElementById("email").value
+
+    let reporte = document.getElementById("solicitud")
+    console.log(reporte)
+
+
+    if ( checkin === "2024-01-01" || checkout === "2024-01-01" || cantidadAdultos === "" || cantidadMenores === "" || cantidadHabitaciones === "" || email === "" ) {
+    document.getElementById("solicitud").textContent = `Todos los campos son obligatorios.`;
     } else {
-        solicitud.textContent = `Compruebe si se llenaron correctamente todos los datos.`;
+        document.getElementById("solicitud").textContent = `
+        Solicitud enviada correctamente. El presupuesto le llegará a su e-mail.`;
         }
 }

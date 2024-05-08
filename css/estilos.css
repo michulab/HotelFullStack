@@ -93,6 +93,7 @@ header{
                         'titulo titulo check-in-input . check-out-input'
                         '. . adultos-label menores-label habitaciones-label'
                         '. . adultos-input menores-input habitaciones-input'
+                        '. . email-label email-input email-input'
                         'boton-form boton-form cotizar cotizar cotizar'
                         '. . solicitud solicitud solicitud';
 }
@@ -164,6 +165,14 @@ header{
     
 }
 
+.email{
+    grid-area: email-label;
+}
+
+#email{
+    grid-area: email-input;
+}
+
 .cotizar{
     grid-area: cotizar;
     background: rgb(54, 117, 219);
@@ -179,7 +188,7 @@ header{
 .solicitud{
     grid-area: solicitud;
     display: flex;
-    color: greenyellow;
+    /* color: greenyellow; */
 }
 
 
