@@ -27,7 +27,7 @@ let footer =`
 document.getElementById("footer").innerHTML = footer
 
 let adultos = document.getElementById("adultos").value
-let reporte = document.getElementById("solicitud")
+let reporte = document.getElementByC("solicitud")
 
 function enviar() {
     if (adultos !== "") {
