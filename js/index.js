@@ -28,22 +28,32 @@ document.getElementById("footer").innerHTML = footer
 
 
 function enviarFormulario() {
-    let checkin = document.getElementById("check-in").value
-    let checkout = document.getElementById("check-out").value
+    let checkin = new Date(document.getElementById("check-in").value)
+    let checkout = new Date(document.getElementById("check-out").value)
+    let fechaActual = new Date()
+    console.log(fechaActual)
+    
     let cantidadAdultos = document.getElementById("adultos").value
-    console.log(cantidadAdultos)
     let cantidadMenores = document.getElementById("menores").value
     let cantidadHabitaciones = document.getElementById("habitaciones").value
+    
     let email = document.getElementById("email").value
 
     let reporte = document.getElementById("solicitud")
     console.log(reporte)
 
-
-    if ( checkin === "2024-01-01" || checkout === "2024-01-01" || cantidadAdultos === "" || cantidadMenores === "" || cantidadHabitaciones === "" || email === "" ) {
-    document.getElementById("solicitud").textContent = `Todos los campos son obligatorios.`;
-    } else {
-        document.getElementById("solicitud").textContent = `
-        Solicitud enviada correctamente. El presupuesto le llegará a su e-mail.`;
-        }
+    if ( checkin <= fechaActual || checkout <=checkin || cantidadAdultos === "" || cantidadMenores === "" || cantidadHabitaciones === "" || email === "" ) {
+    document.getElementById("solicitud").textContent = 
+    `Verifique los datos ingresados`
+} else {
+    document.getElementById("solicitud").textContent = 
+    `Solicitud enviada correctamente. El presupuesto le llegará a su e-mail.`
+    sessionStorage.setItem("mail", email)
+    document.getElementById("check-in").value = ""
+    document.getElementById("check-out").value = ""
+    document.getElementById("adultos").value = ""
+    document.getElementById("menores").value = ""
+    document.getElementById("habitaciones").value = ""
+    document.getElementById("email").value = ""
+    }
 }
