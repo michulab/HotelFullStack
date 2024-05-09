@@ -33,6 +33,7 @@ document.getElementById("footer").innerHTML = footer
 
 //validación del formulario de reservas
 function enviarFormulario() {
+    //definimos variables de datos necesarias
     let checkin = new Date(document.getElementById("check-in").value)
     let checkout = new Date(document.getElementById("check-out").value)
     let fechaActual = new Date()
@@ -43,23 +44,42 @@ function enviarFormulario() {
     
     let email = document.getElementById("email").value
 
-    let reporte = document.getElementById("solicitud")
-
+    //realizamos validación de email con expresión regular
     function validarmail(email) {
         const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
         return regex.test(email)
     }
 
-    if ( checkin <= fechaActual || checkout <=checkin || cantidadAdultos === "" || cantidadMenores === "" || cantidadHabitaciones === "" || validarmail(email) === false ) {
+    //realizamos validación de formulario(fechas y mail correctos, y resto de los campos completados)
+    if ( checkin <= fechaActual || checkout <= checkin || cantidadAdultos === "" || cantidadMenores === "" || cantidadHabitaciones === "" || validarmail(email) === false ) {
     document.getElementById("solicitud").textContent = 
     `Verifique los datos ingresados`
-} else {
+    } else {
     document.getElementById("solicitud").innerHTML = `
         Solicitud enviada correctamente.</br>
         El presupuesto llegará al e-mail proporcionado.`
 
     //guardamos en sessionStorage el mail    
     sessionStorage.setItem("mail", email)
+
+    
+    //creamos un objeto js con la reserva (para luego crear json de datos para backend)
+    function crearObjDesdeFormulario() {
+        
+        let objReserva = {
+            "checkin": checkin , 
+            "checkout": checkout , 
+            "cantidadAdultos": cantidadAdultos , 
+            "cantidadMenores": cantidadMenores , 
+            "cantidadHabitaciones": cantidadHabitaciones , 
+            "emil": email
+        } 
+        console.log(objReserva)
+    
+        //pasamos de objeto .js a objeto JSON
+        let reserva = JSON.stringify(objReserva)
+        console.log(reserva)
+    }
 
     //llamamos a la funcion crear objeto antes de limpiar valores del formulario
     crearObjDesdeFormulario()
@@ -72,29 +92,4 @@ function enviarFormulario() {
     document.getElementById("habitaciones").value = ""
     document.getElementById("email").value = ""
     }
-}
-
-//creamos un objeto con la reserva (para tener json para backend)
-function crearObjDesdeFormulario() {
-
-    let checkin = new Date(document.getElementById("check-in").value)
-    let checkout = new Date(document.getElementById("check-out").value)
-    let cantidadAdultos = document.getElementById("adultos").value
-    let cantidadMenores = document.getElementById("menores").value
-    let cantidadHabitaciones = document.getElementById("habitaciones").value
-    let email = document.getElementById("email").value
-    
-    let objReserva = {
-        "checkin": checkin , 
-        "checkout": checkout , 
-        "cantidadAdultos": cantidadAdultos , 
-        "cantidadMenores": cantidadMenores , 
-        "cantidadHabitaciones": cantidadHabitaciones , 
-        "emil": email
-    } 
-    console.log(objReserva)
-
-    //pasamos de objeto .js a objeto JSON
-    let reserva = JSON.stringify(objReserva)
-    console.log(reserva)
 }
