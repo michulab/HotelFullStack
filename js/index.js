@@ -1,4 +1,4 @@
-//bloque header 
+//armamos bloque header 
 let header = `
 <img src="img/header4.png" alt="Imagen header" class="header-bg">
 <a href="index.html"><img src="img/logo-blanco-furaveri.png" class="logo alt="Logo Hotel Furaveri" ></a>
@@ -15,7 +15,7 @@ let header = `
 document.getElementById("header").innerHTML = header
 
 
-//bloque footer
+//armamos bloque footer
 let footer =`
 <img src="img/footer2.png" alt="Imagen de Fondo (arena y mar)" class="footer-bg">
 <a href="index.html"><img src="img/logo-negro-furaveri.png" alt="Logo Hotel" class="logo-footer"></a>
@@ -58,13 +58,13 @@ function enviarFormulario() {
         Solicitud enviada correctamente.</br>
         El presupuesto llegará al e-mail proporcionado.`
 
-    //guardo en sessionStorage el mail    
+    //guardamos en sessionStorage el mail    
     sessionStorage.setItem("mail", email)
 
-    //creo un objeto con la reserva (para tener json para backend)
+    //llamamos a la funcion crear objeto antes de limpiar valores del formulario
     crearObjDesdeFormulario()
 
-    //limpio los inputs
+    //limpiamos los inputs del formulario
     document.getElementById("check-in").value = ""
     document.getElementById("check-out").value = ""
     document.getElementById("adultos").value = ""
@@ -74,7 +74,7 @@ function enviarFormulario() {
     }
 }
 
-
+//creamos un objeto con la reserva (para tener json para backend)
 function crearObjDesdeFormulario() {
 
     let checkin = new Date(document.getElementById("check-in").value)
@@ -94,6 +94,7 @@ function crearObjDesdeFormulario() {
     } 
     console.log(objReserva)
 
+    //pasamos de objeto .js a objeto JSON
     let reserva = JSON.stringify(objReserva)
     console.log(reserva)
 }
