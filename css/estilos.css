@@ -26,8 +26,8 @@ header{
 }
 
 .logo{
-    width: 200px;
-    height: 100px;
+    width: 250px;
+    height: 125px;
     margin-top: 40px;
 }
 
@@ -39,7 +39,7 @@ header{
 }
 
 .li{
-    font-size: 1.3rem;
+    font-size: 1rem;
     padding: 10px 30px 0 0 ;
     margin: 80px 0 0 20px ;
 }
@@ -78,20 +78,20 @@ header{
     padding: 80px;
 }
 
+
 .formulario{
     background: #212121;
     color: white;
     position: relative;
-    /* top: -250px; */
     width: 70vw;
     max-width: 1300px;
     margin-top: 50px;
     padding: 60px 40px;
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 25px;
     grid-template-areas: 'titulo titulo check-in-label . check-out-label'
                         'titulo titulo check-in-input . check-out-input'
-                        '. . adultos-label menores-label habitaciones-label'
+                        'titulo titulo adultos-label menores-label habitaciones-label'
                         '. . adultos-input menores-input habitaciones-input'
                         '. . email-label email-input email-input'
                         'boton-form boton-form cotizar cotizar cotizar'
@@ -106,16 +106,20 @@ header{
 
 .boton-form{
     grid-area: boton-form;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 20px 15px;
     background: #212121;
     color: white;
+    text-decoration: none;
     border: 1px solid rgb(129, 129, 129);
 }
 
 .boton-form:hover{
-    border: 1px solid white;
+    border: 1.5px solid white;
+    background: #3c3c3c;
     cursor: pointer;
-    scale: 1.05;
+    scale: 1.03;
 }
 
 .check-in{
@@ -177,12 +181,14 @@ header{
     grid-area: cotizar;
     background: rgb(54, 117, 219);
     color: white;
+    font-size: 1.1rem;
     border: 1px solid rgb(129, 129, 129);
 }
 
 .cotizar:hover{
-    border: 1px solid white;
-    scale: 1.05;
+    border: 1.5px solid white;
+    background: rgb(34, 84, 164);
+    scale: 1.03;
 }
 
 .solicitud{
@@ -238,5 +244,59 @@ header{
 
     .formulario{
         margin-top: 0;
+    }
+
+    .logo{
+        width: 200px;
+        height: 100px;
+        margin-top: 20px;
+    }
+    
+    
+    /*.lista{
+        list-style: none;
+        display: flex;
+        border-bottom: 0.5px solid white;
+    }
+    
+    .li{
+        font-size: 1.3rem;
+        padding: 10px 30px 0 0 ;
+        margin: 80px 0 0 20px ;
+    }
+    
+    .li:hover{
+        cursor: pointer;
+    }
+    
+    .item{
+        text-decoration: none;
+        color: white;
+    } */
+    
+}
+
+@media (max-width: 1250px) {
+    .formulario{
+        width: 70vw;
+        max-width: 800px;
+        margin-top: 50px;
+        padding: 60px 40px;
+        display: grid;
+        grid-gap: 35px;
+        grid-template-areas:
+                            'titulo titulo titulo'
+                            'boton-form boton-form boton-form'
+                            'check-in-label . check-out-label'
+                            'check-in-input . check-out-input'
+                            'adultos-label menores-label habitaciones-label'
+                            'adultos-input menores-input habitaciones-input'
+                            'email-label email-input email-input'
+                            'cotizar cotizar cotizar'
+                            'solicitud solicitud solicitud';
+    }
+
+    .cotizar{
+        padding: 20px;
     }
 }

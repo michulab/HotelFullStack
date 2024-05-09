@@ -1,6 +1,6 @@
 let header = `
 <img src="img/header4.png" alt="Imagen header" class="header-bg">
-<a href="index.html" class="logo"><img src="img/logo-blanco-furaveri.png" alt="Logo Hotel Furaveri" ></a>
+<a href="index.html"><img src="img/logo-blanco-furaveri.png" class="logo alt="Logo Hotel Furaveri" ></a>
 
 <nav class="menu">
     <ul class="lista">
@@ -51,8 +51,9 @@ function enviarFormulario() {
     document.getElementById("solicitud").textContent = 
     `Verifique los datos ingresados`
 } else {
-    document.getElementById("solicitud").textContent = 
-    `Solicitud enviada correctamente. El presupuesto le llegará a su e-mail.`
+    document.getElementById("solicitud").innerHTML = `
+        Solicitud enviada correctamente.</br>
+        El presupuesto llegará al e-mail proporcionado.`
     sessionStorage.setItem("mail", email)
     document.getElementById("check-in").value = ""
     document.getElementById("check-out").value = ""
