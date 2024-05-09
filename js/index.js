@@ -1,3 +1,4 @@
+//bloque deader 
 let header = `
 <img src="img/header4.png" alt="Imagen header" class="header-bg">
 <a href="index.html"><img src="img/logo-blanco-furaveri.png" class="logo alt="Logo Hotel Furaveri" ></a>
@@ -13,6 +14,8 @@ let header = `
 `; 
 document.getElementById("header").innerHTML = header
 
+
+//bloque footer
 let footer =`
 <img src="img/footer2.png" alt="Imagen de Fondo (arena y mar)" class="footer-bg">
 <a href="index.html"><img src="img/logo-negro-furaveri.png" alt="Logo Hotel" class="logo-footer"></a>
@@ -27,6 +30,8 @@ let footer =`
 document.getElementById("footer").innerHTML = footer
 
 
+
+//validación del formulario de reservas
 function enviarFormulario() {
     let checkin = new Date(document.getElementById("check-in").value)
     let checkout = new Date(document.getElementById("check-out").value)
