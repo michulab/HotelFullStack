@@ -67,7 +67,6 @@ header{
 
 .h1-main{
     position: relative;
-    /* top: -400px; */
     display: flex;
     justify-content: center;
     text-align: center;
@@ -84,7 +83,7 @@ header{
     color: white;
     position: relative;
     width: 70vw;
-    max-width: 1300px;
+    /* max-width: 1300px; */
     margin-top: 50px;
     padding: 60px 40px;
     display: grid;
@@ -233,6 +232,7 @@ header{
 
 
 @media (max-width: 1400px) {
+    
     header{
         height: auto;
     }
@@ -251,39 +251,14 @@ header{
         height: 100px;
         margin-top: 20px;
     }
-    
-    
-    /*.lista{
-        list-style: none;
-        display: flex;
-        border-bottom: 0.5px solid white;
-    }
-    
-    .li{
-        font-size: 1.3rem;
-        padding: 10px 30px 0 0 ;
-        margin: 80px 0 0 20px ;
-    }
-    
-    .li:hover{
-        cursor: pointer;
-    }
-    
-    .item{
-        text-decoration: none;
-        color: white;
-    } */
-    
+
 }
 
 @media (max-width: 1250px) {
     .formulario{
-        width: 70vw;
-        max-width: 800px;
-        margin-top: 50px;
         padding: 60px 40px;
-        display: grid;
-        grid-gap: 35px;
+        grid-row-gap: 10px;
+        grid-column-gap: 20px;
         grid-template-areas:
                             'titulo titulo titulo'
                             'boton-form boton-form boton-form'
@@ -299,4 +274,87 @@ header{
     .cotizar{
         padding: 20px;
     }
+
+    .boton-form{
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .header-bg{
+        height: 100vh;
+        width: 180vh;
+
+    }
+
+    .h1-main{
+        font-size: 1rem;
+
+    }
+
+    .li{
+        font-size: 0.8rem;
+        padding: 10px 0px 0 0 ;
+        margin: 80px 0 0 20px ;
+    }
+
+    .formulario{
+        grid-template-areas:
+                            'titulo titulo'
+                            'boton-form boton-form'
+                            'check-in-label check-in-input'
+                            'check-out-label check-out-input'
+                            'adultos-label adultos-input'
+                            'menores-label menores-input'
+                            'habitaciones-label habitaciones-input'
+                            'email-label email-input'
+                            'cotizar cotizar'
+                            'solicitud solicitud';
+    }
+    
+    .boton-form{
+        margin-top: 25px;
+    }
+
+    .cotizar{
+        margin-top: 50px;
+    }
+
+
+}
+
+@media (max-width: 650px) {
+
+
+
+    .formulario{
+        grid-template-areas:
+                            'titulo'
+                            'boton-form'
+                            'check-in-label'
+                            'check-in-input'
+                            'check-out-label' 
+                            'check-out-input'
+                            'adultos-label'
+                            'adultos-input'
+                            'menores-label'
+                            'menores-input'
+                            'habitaciones-label' 
+                            'habitaciones-input'
+                            'email-label'
+                            'email-input'
+                            'cotizar'
+                            'solicitud'
+                            'solicitud';
+    }
+
+    .boton-form{
+        margin-top: 25px;
+    }
+
+    .cotizar{
+        margin-top: 50px;
+    }
+
 }
