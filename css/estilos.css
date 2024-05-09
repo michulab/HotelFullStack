@@ -271,13 +271,16 @@ header{
                             'solicitud solicitud solicitud';
     }
 
-    .cotizar{
-        padding: 20px;
-    }
-
     .boton-form{
+        margin-top: 25px;
         margin-bottom: 50px;
     }
+
+    .cotizar{
+        padding: 20px;
+        margin-top: 50px;
+    }
+
 }
 
 @media (max-width: 1000px) {
