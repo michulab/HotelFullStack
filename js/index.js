@@ -1,4 +1,4 @@
-//bloque deader 
+//bloque header 
 let header = `
 <img src="img/header4.png" alt="Imagen header" class="header-bg">
 <a href="index.html"><img src="img/logo-blanco-furaveri.png" class="logo alt="Logo Hotel Furaveri" ></a>
@@ -36,8 +36,7 @@ function enviarFormulario() {
     let checkin = new Date(document.getElementById("check-in").value)
     let checkout = new Date(document.getElementById("check-out").value)
     let fechaActual = new Date()
-    console.log(fechaActual)
-    
+
     let cantidadAdultos = document.getElementById("adultos").value
     let cantidadMenores = document.getElementById("menores").value
     let cantidadHabitaciones = document.getElementById("habitaciones").value
@@ -45,7 +44,6 @@ function enviarFormulario() {
     let email = document.getElementById("email").value
 
     let reporte = document.getElementById("solicitud")
-    console.log(reporte)
 
     function validarmail(email) {
         const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
@@ -59,7 +57,14 @@ function enviarFormulario() {
     document.getElementById("solicitud").innerHTML = `
         Solicitud enviada correctamente.</br>
         El presupuesto llegará al e-mail proporcionado.`
+
+    //guardo en sessionStorage el mail    
     sessionStorage.setItem("mail", email)
+
+    //creo un objeto con la reserva (para tener json para backend)
+    crearObjDesdeFormulario()
+
+    //limpio los inputs
     document.getElementById("check-in").value = ""
     document.getElementById("check-out").value = ""
     document.getElementById("adultos").value = ""
@@ -67,4 +72,28 @@ function enviarFormulario() {
     document.getElementById("habitaciones").value = ""
     document.getElementById("email").value = ""
     }
+}
+
+
+function crearObjDesdeFormulario() {
+
+    let checkin = new Date(document.getElementById("check-in").value)
+    let checkout = new Date(document.getElementById("check-out").value)
+    let cantidadAdultos = document.getElementById("adultos").value
+    let cantidadMenores = document.getElementById("menores").value
+    let cantidadHabitaciones = document.getElementById("habitaciones").value
+    let email = document.getElementById("email").value
+    
+    let objReserva = {
+        "checkin": checkin , 
+        "checkout": checkout , 
+        "cantidadAdultos": cantidadAdultos , 
+        "cantidadMenores": cantidadMenores , 
+        "cantidadHabitaciones": cantidadHabitaciones , 
+        "emil": email
+    } 
+    console.log(objReserva)
+
+    let reserva = JSON.stringify(objReserva)
+    console.log(reserva)
 }
