@@ -1,18 +1,18 @@
 //armamos bloque header 
-let header = `
-<img src="img/header4.png" alt="Imagen header" class="header-bg">
-<a href="index.html"><img src="img/logo-blanco-furaveri.png" class="logo alt="Logo Hotel Furaveri" ></a>
+// let header = `
+// <img src="img/header4.png" alt="Imagen header" class="header-bg">
+// <a href="index.html"><img src="img/logo-blanco-furaveri.png" class="logo alt="Logo Hotel Furaveri" ></a>
 
-<nav class="menu">
-    <ul class="lista">
-        <li class="li"><a class="item" href="hotel.html">HOTEL</a></li>
-        <li class="li"><a class="item" href="habitaciones.html">HABITACIONES</a></li>
-        <li class="li"><a class="item" href="gastronomia.html">GASTRONOMIA</a></li>
-        <li class="li"><a class="item" href="promociones.html">PROMOCIONES</a></li>
-    </ul>
-</nav>
-`; 
-document.getElementById("header").innerHTML = header
+// <nav class="menu">
+//     <ul class="lista">
+//         <li class="li"><a class="item" href="hotel.html">HOTEL</a></li>
+//         <li class="li"><a class="item" href="habitaciones.html">HABITACIONES</a></li>
+//         <li class="li"><a class="item" href="gastronomia.html">GASTRONOMIA</a></li>
+//         <li class="li"><a class="item" href="promociones.html">PROMOCIONES</a></li>
+//     </ul>
+// </nav>
+// `; 
+// document.getElementById("header").innerHTML = header
 
 
 //armamos bloque footer
