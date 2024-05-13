@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .contenedor{
@@ -16,13 +17,14 @@
 header{
     display: flex;
     justify-content: space-between;
-    height: 100vh;
+    height: 850px;
     width: 100vw;
+    /* max-width: 1500px; */
     background: linear-gradient(rgba(5, 7, 12, 0.5),rgba(5, 7, 12, 0.5)),
     url('/img/header4.png');
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 70px;
+    padding: 60px 200px;
 }
 
 .logo{
@@ -68,7 +70,7 @@ header{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: -400px;
+    margin-top: -540px;
 }
 
 .h1-main{
@@ -207,6 +209,8 @@ header{
 .contenido{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    width: 90vw;
 }
 
 .footer{
@@ -215,30 +219,36 @@ header{
     justify-content: center;
     align-items: center;
     height: 450px;
-}
+    background: #000;
+    background:url('/img/footer2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 
-.footer-bg{
-    width: 100vw;
-    position: absolute;
-    z-index: -1;
-    max-width: 1900px;
 }
 
 .logo-footer{
-    width: 300px;
+    width: 200px;
     height: auto;
 }
 
 .social *{
-    width: 50px;
+    width: 40px;
     margin: 20px;
 }
 
 
 @media (max-width: 1400px) {
+
+    header{
+        padding: 70px 100px;
+    }
     
+    .main{
+        margin-top: -600px;
+    }
+
     .h1-main{
-        margin-top: 60px;
+        margin-top: 0px;
         font-size: 1.5rem;
         width: 90%;
     }
@@ -285,6 +295,9 @@ header{
 }
 
 @media (max-width: 1000px) {
+    header{
+        padding: 70px;
+    }
 
     .logo{
         width: 180px;
@@ -299,7 +312,7 @@ header{
 
     .li{
         font-size: 0.8rem;
-        padding: 10px 0px 0 0 ;
+        padding: 10px 20px 0 0 ;
         margin: 80px 0 0 20px ;
     }
 
@@ -328,19 +341,84 @@ header{
 
 }
 
+@media (max-width: 800px) {
+    header{
+        padding: 70px 30px;
+    }
+
+    .li{
+        font-size: 0.8rem;
+        padding: 10px 10px 0 10px ;
+        margin: 80px 0 0 0px ;
+    }
+}
+
 
 @media (max-width: 650px) {
 
+    header{
+        justify-content: space-between;
+        padding: 20px 20px 0 20px;
+        flex-wrap: wrap;
+        align-self: flex-start;
+    }
+
+    .logo{
+        width: 150px;
+        height: 75px;
+        margin: 15px 15px 0px 15px;
+    }
+
     .menu{
-        display: none;
+        display: flex;
+        background: #0b0b0b;
+        height: 550px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        z-index: 2;
+        opacity: 0;
+        padding: 50px;
+        /* margin-left: 650px; */
+        width: 100vw;
+        transition: all .7s;
+    }
+    
+    #check-btn:checked + .menu{
+        /* margin-left: 0px; */
+        opacity: 1;
+    }
+    
+    .lista{
+        flex-wrap: wrap;
+        border: none;
+        gap: 30px;
+    }
+
+    .li{
+        font-size: 1rem;
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 15px;
     }
 
     .check-btn{
         display: inline;
         color: white;
+        padding: 35px;
     }
-
+    
+    .h1-main{
+        font-size: 1rem;
+        color: white;
+        width: 75%;
+        padding: 10px;
+        margin-bottom: 120px;
+    }
+    
     .formulario{
+        padding: 45px;
         grid-template-areas:
                             'titulo'
                             'boton-form'
@@ -361,39 +439,34 @@ header{
                             'solicitud';
     }
 
+    .h1-form{
+        font-size: 1rem;
+    }
+
     .boton-form{
-        margin-top: 25px;
+        margin: 25px 0px 20px 0px;
+        padding: 10px;
     }
 
     .cotizar{
-        margin-top: 50px;
+        margin: 20px 0 0 0;
     }
+
+    .social *{
+        width: 30px;
+        margin: 10px;
+    }
+
 
 }
 
 @media (max-width: 400px) {
-    header{
-        justify-content: space-between;
+    .formulario{
         padding: 20px;
     }
 
-    .check-btn{
-        padding: 35px;
+    .social *{
+        width: 30px;
+        margin: 5px;
     }
-
-    .logo{
-        width: 150px;
-        height: 75px;
-        margin: 15px 15px 0px 15px;
-    }
-
-    
-    .h1-main{
-        font-size: 0.6rem;
-        color: white;
-        width: 75%;
-        padding: 10px;
-        margin-bottom: 120px;
-    }
-
 }
