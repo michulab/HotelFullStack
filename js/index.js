@@ -1,5 +1,5 @@
 //armamos bloque header 
-let header = `
+let header1 = `
 <a href="index.html"><img src="img/logo-blanco-furaveri.png" class="logo" alt="Logo Hotel Furaveri" ></a>
             
             <label for="check-btn" class="check-btn">
@@ -18,7 +18,7 @@ let header = `
                 </ul>
             </nav>
 `; 
-document.getElementById("header").innerHTML = header
+document.getElementById("header-lg").innerHTML = header1
 
 
 //armamos bloque footer
