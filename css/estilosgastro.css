@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor{
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75vw;
+    max-width: 1000px;
+    min-width: 320px;
+    margin: auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-evenly;
+    height: 250px;
+}
+
+.header-bg{
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+    max-width: 1900px;
+}
+
+.logo{
+    width: 250px;
+    height: 125px;
+    margin-top: 40px;
+}
+
+
+.lista{
+    list-style: none;
+    display: flex;
+    border-bottom: 0.5px solid white;
+}
+
+.li{
+    font-size: 1rem;
+    padding: 10px 30px 0 0 ;
+    margin: 80px 0 0 20px ;
+}
+
+.li:hover{
+    cursor: pointer;
+}
+
+.item{
+    text-decoration: none;
+    color: white;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.h1-main{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'raleway', sans-serif;
+    font-style: italic;
+    color: white;
+    width: 100%;
+    max-width: 1300px;
+    padding: 80px;
+    align-content: center;
+}
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+    padding: 250px;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    height: 450px;
+}
+
+.footer-bg{
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+    max-width: 1900px;
+}
+
+.logo-footer{
+    width: 300px;
+    height: auto;
+}
+
+.social *{
+    width: 50px;
+    margin: 20px;
+}
+
+.image{
+    display: block;
+    width: 100%;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: antiquewhite;
+}
+.thumbnail.hover{
+    transform: translate(-4px);
+}
+.img-conteiner:hover .overlay{
+    opacity: 1;
+}
+
+.gastro-2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'raleway', sans-serif;
+    font-style: italic;
+    color: black;
+    width: 100%;
+    max-width: 1300px;
+    padding: 80px;
+    align-content: center;
+}
+@media (max-width: 1400px) {
+    header{
+        height: auto;
+    }
+    .h1-main{
+        margin-top: 60px;
+        font-size: 1.5rem;
+        width: 90%;
+    }
+
+    .formulario{
+        margin-top: 0;
+    }
+
+    .logo{
+        width: 200px;
+        height: 100px;
+        margin-top: 20px;
+    }
+}
+    
+    
