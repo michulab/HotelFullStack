@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="shortcut icon" href="img/hotel.png" type="image/x-icon">
+</head>
+<body>
+    <div class="contenedor">
+        <header id="header">
+        </header>
+        
+        <br><br>
+        <main>
+            <section class="form2">
+                <h1 class="">CONTACTO</h1><br><br>
+                <h2>Envíe su consulta:</h2> <br>
+                <label for="nom">Nombre: *</label>
+                <input type="text" name="nom" id="nom" maxlength="30"> 
+                <label for="ape">Apellido: *</label>
+                <input type="text" name="ape" id="ape"> 
+                <label for="correo">E-mail: </label>
+                <input type="email" name="mail" id="correo" placeholder="juan@example.com">
+                <label for="tel">Teléfono:</label> 
+                <input type="number" id="tel" name="tel">
+                <br><br>
+                <label for="consulta">Consulta: *</label>   
+                <br><br>
+                <textarea name="consulta" id="consulta" cols="105" rows="10" placeholder="Escriba su consulta"></textarea><br><br>
+                <p>* Campos obligatorios</p>
+                <br>
+                <input type="checkbox" id="check" class="check"> Deseo recibir promociones a mi teléfono. 
+                <br><br><br>
+                <button class="enviar-btn" onclick="validarFormulario()">Enviar consulta</button>
+                <button class="limpiar-btn" onclick="limpiarFormulario()">Limpiar formulario</button>
+                <br><br>
+                <p id="solicitud" class="solicitud"></p>
+                <p id="solicitud-tel" class="solicitud-tel"></p>
+                <hr>
+
+            </section>
+
+            <br><br>
+            <section>
+                <h2 class="h2">¿Dónde estamos?</h2>
+                <br><br>
+                <iframe class="iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d836.5288445703059!2d73.5173914857287!3d4.176277503699527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b3f7fdb37d8f58b%3A0x7a40fb9580738b51!2sArcanum%20Maldives!5e0!3m2!1ses!2sar!4v1715548334546!5m2!1ses!2sar" width="800" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+        </main>
+
+        <footer id="footer" class="footer">
+        </footer>
+
+    </div>
+        
+    <script src="js/contacto.js"></script>
+</body>
+</html>

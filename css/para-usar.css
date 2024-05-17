@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 2000px;
+    flex-wrap: nowrap;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 350px;
+    width: 100vw;
+    background: linear-gradient(rgba(5, 7, 12, 0.5),rgba(5, 7, 12, 0.5)),
+    url('/img/header6.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 60px 200px;
+}
+
+.logo{
+    width: 250px;
+    height: 125px;
+}
+
+
+.lista{
+    list-style: none;
+    display: flex;
+    border-bottom: 0.5px solid white;
+}
+
+.li{
+    font-size: 1rem;
+    padding: 10px 30px 0 0 ;
+    margin: 80px 0 0 20px ;
+}
+
+.li:hover{
+    cursor: pointer;
+}
+
+.item{
+    text-decoration: none;
+    color: white;
+}
+
+.check-btn{
+    display: none;
+}
+
+#check-btn{
+    display: none;
+}
+
+
+
+
+
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+    background: #000;
+    background:url('/img/footer2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.logo-footer{
+    width: 200px;
+    height: auto;
+}
+
+.social *{
+    width: 40px;
+    margin: 20px;
+}
+
+
+@media (max-width: 1400px) {
+
+    header{
+        padding: 70px 100px;
+    }
+    
+    .logo{
+        width: 200px;
+        height: 100px;
+        margin-top: 20px;
+    }
+
+}
+
+@media (max-width: 1250px) {
+    .formulario{
+        padding: 60px 40px;
+        grid-row-gap: 10px;
+        grid-column-gap: 20px;
+        grid-template-areas:
+                            'titulo titulo titulo'
+                            'boton-form boton-form boton-form'
+                            'check-in-label . check-out-label'
+                            'check-in-input . check-out-input'
+                            'adultos-label menores-label habitaciones-label'
+                            'adultos-input menores-input habitaciones-input'
+                            'email-label email-input email-input'
+                            'cotizar cotizar cotizar'
+                            'solicitud solicitud solicitud';
+    }
+
+    .boton-form{
+        margin-top: 25px;
+        margin-bottom: 50px;
+    }
+
+    .cotizar{
+        padding: 20px;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 1000px) {
+    header{
+        padding: 70px;
+    }
+
+    .logo{
+        width: 180px;
+        height: 90px;
+        margin-top: 30px;
+    }
+
+    .h1-main{
+        font-size: 1rem;
+
+    }
+
+    .li{
+        font-size: 0.8rem;
+        padding: 10px 20px 0 0 ;
+        margin: 80px 0 0 20px ;
+    }
+
+}
+
+@media (max-width: 800px) {
+    header{
+        padding: 70px 30px;
+    }
+
+    .li{
+        font-size: 0.8rem;
+        padding: 10px 10px 0 10px ;
+        margin: 80px 0 0 0px ;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    header{
+        justify-content: space-between;
+        padding: 20px 20px 0 20px;
+        flex-wrap: wrap;
+        align-self: flex-start;
+    }
+
+    .logo{
+        width: 100px;
+        height: 60px;
+        margin: 15px 15px 0px 15px;
+    }
+
+    .menu{
+        display: flex;
+        background: #0b0b0b;
+        height: 550px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        z-index: 2;
+        opacity: 0;
+        padding: 50px;
+        /* margin-left: 650px; */
+        width: 100vw;
+        transition: all .7s;
+    }
+    
+    #check-btn:checked + .menu{
+        /* margin-left: 0px; */
+        opacity: 1;
+    }
+    
+    .lista{
+        flex-wrap: wrap;
+        border: none;
+        gap: 30px;
+    }
+
+    .li{
+        font-size: 1rem;
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+    }
+
+    .check-btn{
+        display: inline;
+        color: white;
+        padding: 35px;
+    }
+    
+    .social *{
+        width: 30px;
+        margin: 10px;
+    }
+
+
+}
+
+@media (max-width: 400px) {
+    .social *{
+        width: 30px;
+        margin: 5px;
+    }
+}
