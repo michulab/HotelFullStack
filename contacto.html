@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link rel="stylesheet" href="css/estilos.css">
     <link rel="shortcut icon" href="img/hotel.png" type="image/x-icon">
 </head>
 <body>
@@ -17,22 +16,27 @@
             <section class="form2">
                 <h1 class="">CONTACTO</h1><br><br>
                 <h2>Envíe su consulta:</h2> <br>
-                <form action="" method="">
-                    <label for="nom">Nombre: *</label>
-                    <input type="text" name="nom" id="nom" maxlength="30" required> 
-                    <label for="ape">Apellido: *</label>
-                    <input type="text" name="ape" id="ape"> 
-                    <label for="correo">E-mail: </label>
-                    <input type="email" name="mail" id="correo" placeholder="juan@example.com" required> <br><br>
-                    <label for="consulta">Consulta: *</label>   
-                    <br><br>
-                    <textarea name="consulta" id="consulta" cols="105" rows="10" required placeholder="Escriba su consulta"></textarea><br><br>
-                    <p>* Campos obligatorios</p>
-                    <br><br>
-                    <input type="submit" value="Enviar consulta">
-                    <input type="reset" value="Limpiar formulario">
-                    <br><br>
-                </form>
+                <label for="nom">Nombre: *</label>
+                <input type="text" name="nom" id="nom" maxlength="30"> 
+                <label for="ape">Apellido: *</label>
+                <input type="text" name="ape" id="ape"> 
+                <label for="correo">E-mail: </label>
+                <input type="email" name="mail" id="correo" placeholder="juan@example.com">
+                <label for="tel">Teléfono:</label> 
+                <input type="num" id="tel" name="tel">
+                <br><br>
+                <label for="consulta">Consulta: *</label>   
+                <br><br>
+                <textarea name="consulta" id="consulta" cols="105" rows="10" placeholder="Escriba su consulta"></textarea><br><br>
+                <p>* Campos obligatorios</p>
+                <br>
+                <input type="checkbox" id="check" class="check"> Deseo recibir promociones a mi teléfono. 
+                <br><br><br>
+                <button class="enviar-btn" onclick="validarFormulario()">Enviar consulta</button>
+                <button class="limpiar-btn" onclick="limpiarFormulario()">Limpiar formulario</button>
+                <br><br>
+                <p id="solicitud" class="solicitud"></p>
+                <p id="solicitud-tel" class="solicitud-tel"></p>
                 <hr>
 
             </section>
@@ -50,6 +54,6 @@
 
     </div>
         
-    <script src="js/index.js"></script>
+    <script src="js/contacto.js"></script>
 </body>
 </html>
