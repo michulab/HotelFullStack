@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .contenedor{
@@ -12,22 +13,24 @@
     justify-content: center;
     align-items: center;
     width: 75vw;
-    max-width: 1000px;
+    max-width: 2000px;
     min-width: 320px;
     margin: auto;
+    flex-wrap: nowrap;
+
 }
 
 header{
     display: flex;
-    justify-content: space-evenly;
-    height: 250px;
-}
-
-.header-bg{
+    justify-content: space-between;
+    height: 850px;
     width: 100vw;
-    position: absolute;
-    z-index: -1;
-    max-width: 1900px;
+    background: linear-gradient(rgba(5, 7, 12, 0.5),rgba(5, 7, 12, 0.5)),
+    url('/img/header4.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 60px 200px;
 }
 
 .logo{
@@ -58,22 +61,30 @@ header{
     color: white;
 }
 
+.check-btn{
+    display: none;
+}
+
+#check-btn{
+    display: none;
+}
+
 .main{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: -540px;
 }
 
 .h1-main{
     position: relative;
     display: flex;
     justify-content: center;
-    padding: 2rem;
     text-align: center;
     font-size: 3rem;
-    font-family: 'raleway', sans-serif;
     font-style: italic;
     color: white;
+    font-style: italic;
     width: 100%;
     max-width: 1300px;
     padding: 80px;
@@ -83,7 +94,8 @@ header{
 .contenido{
     display: flex;
     flex-direction: column;
-    padding: 250px;
+    justify-content: center;
+    width: 90vw;
 }
 
 .footer{
@@ -91,27 +103,33 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    align-items: center;
     height: 450px;
-}
-
-.footer-bg{
-    width: 100vw;
-    position: absolute;
-    z-index: -1;
-    max-width: 1900px;
+    background: #000;
+    background:url('/img/footer2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .logo-footer{
-    width: 300px;
+    width: 200px;
     height: auto;
 }
 
 .social *{
-    width: 50px;
+    width: 40px;
     margin: 20px;
 }
 
+aside{
+    text-align: justify;
+    font-size: 2rem;
+    font-style: italic;
+    color: black;
+    width: 100%;
+    max-width: 1300px;
+    padding: 40px;
+
+}
 .image{
     display: block;
     width: 100%;
@@ -137,37 +155,177 @@ header{
 
 .gastro-2{
     position: relative;
-    display: flex;
     justify-content: center;
-    padding: 2rem;
     text-align: center;
     font-size: 3rem;
-    font-family: 'raleway', sans-serif;
     font-style: italic;
     color: black;
     width: 100%;
     max-width: 1300px;
-    padding: 80px;
+    padding: 40px;
     align-content: center;
 }
+h1{
+    font-size: 4rem
+}
+h2{
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+h3{
+    font-size: 3rem;
+
+}
+
 @media (max-width: 1400px) {
+
     header{
-        height: auto;
+        padding: 70px 100px;
     }
-    .h1-main{
-        margin-top: 60px;
-        font-size: 1.5rem;
-        width: 90%;
-    }
-
-    .formulario{
-        margin-top: 0;
-    }
-
+    
     .logo{
         width: 200px;
         height: 100px;
         margin-top: 20px;
+    }
+
+}
+
+@media (max-width: 1250px) {
+    .formulario{
+        padding: 60px 40px;
+        grid-row-gap: 10px;
+        grid-column-gap: 20px;
+        grid-template-areas:
+                            'titulo titulo titulo'
+                            'boton-form boton-form boton-form'
+                            'check-in-label . check-out-label'
+                            'check-in-input . check-out-input'
+                            'adultos-label menores-label habitaciones-label'
+                            'adultos-input menores-input habitaciones-input'
+                            'email-label email-input email-input'
+                            'cotizar cotizar cotizar'
+                            'solicitud solicitud solicitud';
+    }
+
+    .boton-form{
+        margin-top: 25px;
+        margin-bottom: 50px;
+    }
+
+    .cotizar{
+        padding: 20px;
+        margin-top: 50px;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    header{
+        padding: 70px;
+    }
+
+    .logo{
+        width: 180px;
+        height: 90px;
+        margin-top: 30px;
+    }
+
+    .h1-main{
+        font-size: 1rem;
+
+    }
+
+    .li{
+        font-size: 0.8rem;
+        padding: 10px 20px 0 0 ;
+        margin: 80px 0 0 20px ;
+    }
+
+}
+
+@media (max-width: 800px) {
+    header{
+        padding: 70px 30px;
+    }
+
+    .li{
+        font-size: 0.8rem;
+        padding: 10px 10px 0 10px ;
+        margin: 80px 0 0 0px ;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    header{
+        justify-content: space-between;
+        padding: 20px 20px 0 20px;
+        flex-wrap: wrap;
+        align-self: flex-start;
+    }
+
+    .logo{
+        width: 100px;
+        height: 60px;
+        margin: 15px 15px 0px 15px;
+    }
+
+    .menu{
+        display: flex;
+        background: #0b0b0b;
+        height: 550px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        z-index: 2;
+        opacity: 0;
+        padding: 50px;
+        /* margin-left: 650px; */
+        width: 100vw;
+        transition: all .7s;
+    }
+    
+    #check-btn:checked + .menu{
+        /* margin-left: 0px; */
+        opacity: 1;
+    }
+    
+    .lista{
+        flex-wrap: wrap;
+        border: none;
+        gap: 30px;
+    }
+
+    .li{
+        font-size: 1rem;
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+    }
+
+    .check-btn{
+        display: inline;
+        color: white;
+        padding: 35px;
+    }
+    
+    .social *{
+        width: 30px;
+        margin: 10px;
+    }
+
+
+}
+
+@media (max-width: 400px) {
+    .social *{
+        width: 30px;
+        margin: 5px;
     }
 }
     

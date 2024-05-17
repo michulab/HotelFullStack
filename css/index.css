@@ -30,6 +30,7 @@ header{
 .logo{
     width: 250px;
     height: 125px;
+    margin-top: 40px;
 }
 
 
@@ -54,21 +55,6 @@ header{
     color: white;
 }
 
-<<<<<<< HEAD:css/estilos.css
-=======
-.check-btn{
-    display: none;
-}
-
-#check-btn{
-    display: none;
-}
-
-
-
-
-
->>>>>>> 9594bb7e9744fb810f1446c78269f6f5c4e1174f:css/index.css
 .main{
     display: flex;
     justify-content: center;
@@ -455,25 +441,4 @@ header{
         margin: 20px 0 0 0;
     }
 
-<<<<<<< HEAD:css/estilos.css
 }
-=======
-    .social *{
-        width: 30px;
-        margin: 10px;
-    }
-
-
-}
-
-@media (max-width: 400px) {
-    .formulario{
-        padding: 20px;
-    }
-
-    .social *{
-        width: 30px;
-        margin: 5px;
-    }
-}
->>>>>>> 9594bb7e9744fb810f1446c78269f6f5c4e1174f:css/index.css
