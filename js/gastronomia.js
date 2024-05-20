@@ -20,6 +20,7 @@ let header = `
 `; 
 document.getElementById("header").innerHTML = header
 
+
 //armamos bloque footer
 let footer =`
 <a href="#header"><img src="img/logo-negro-furaveri.png" alt="Logo Hotel" class="logo-footer"></a>
